@@ -65,13 +65,13 @@ For advanced Docker usage:
 - Create container from dockerfile:
 
 ```
-docker build -t midcor:0.3 .
+docker build -t artimid .
 ```
 
 Alternatively, pull directly from the repo 
 
 ```
-docker pull container-registry.phenomenal-h2020.eu/phnmnl/midcor
+docker pull container-registry.phenomenal-h2020.eu/phnmnl/artimid
 ```
 
 
@@ -87,26 +87,18 @@ docker run -it -v $PWD:/data container-registry.phenomenal-h2020.eu/phnmnl/midco
 
 To run MIDcor as a docker image created locally:
 
-- using an example of monopeak CDF files, execute
+- using an example, execute
 
 ```
-docker run -it -v $PWD:/data midcor:0.3 -i /data/ramidout.csv -o /data/midcorout.csv 
+docker run -it -v $PWD:/data artimid -i /data/sw620 -s /data/files/SW620/ 
 ```
-- using an example of multipeaks CDF files, execute
- 
-```
-docker run -it -v $PWD:/data midcor:0.3 -i /data/cdf2midout.csv -o /data/midcormulti.csv 
-```
+
 - run test1 using the data that are in the file "ramidout.csv" in https://drive.google.com/drive/folders/0B1lAg6jyw6lvSlphUi1mdlUwUXM
  
 ```
-docker run -it --entrypoint=runTest1.sh midcor:0.3 
+docker run -it --entrypoint=runTest1.sh artimid
 ```
-- run test2 using the data that are in the file "cdf2midout.csv" in https://drive.google.com/drive/folders/0B1lAg6jyw6lvSlphUi1mdlUwUXM
- 
-```
-docker run -it --entrypoint=runTest2.sh midcor:0.3 
-```
+
 
 ## Publications
 
