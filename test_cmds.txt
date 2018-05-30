@@ -1,2 +1,2 @@
-which midcor.R
+which rartimid.R
 which Rscript
