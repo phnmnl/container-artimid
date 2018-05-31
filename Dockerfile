@@ -15,7 +15,7 @@ LABEL license="https://github.com/phnmnl/container-artimid/blob/develop/License.
 LABEL license="https://github.com/phnmnl/container-artimid/blob/master/License.txt"
 LABEL tags="Metabolomics"
 
-ENV REVISION "8d8178e358e8f8d8f4559faca4b18b3932186fcb"
+ENV REVISION "6bde3cb4e1a88be03dae05a526c511b6c1c8defe"
 
 # Setup package repos
 RUN apt-get -y update && apt-get -y --no-install-recommends install r-base-dev libssl-dev \
@@ -37,6 +37,9 @@ RUN chmod a+x /usr/local/bin/runTest1.sh
 
 ADD runTest2.sh /usr/local/bin/runTest2.sh
 RUN chmod a+x /usr/local/bin/runTest2.sh
+
+ADD runTest3.sh /usr/local/bin/runTest3.sh
+RUN chmod a+x /usr/local/bin/runTest3.sh
 # Define Entry point script
 ENTRYPOINT ["rartimid.R"]
 
