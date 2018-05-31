@@ -34,6 +34,9 @@ RUN chmod +x /usr/bin/rartimid.R
 # Add test scripts
 ADD runTest1.sh /usr/local/bin/runTest1.sh
 RUN chmod a+x /usr/local/bin/runTest1.sh
+
+ADD runTest2.sh /usr/local/bin/runTest2.sh
+RUN chmod a+x /usr/local/bin/runTest2.sh
 # Define Entry point script
 ENTRYPOINT ["rartimid.R"]
 
